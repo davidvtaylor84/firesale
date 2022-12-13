@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-
+import StageDirections from './components/CourseGoals/StageDirections/StageDirections';
 import CourseGoalList from './components/CourseGoals/CourseGoalList/CourseGoalList';
 import CourseInput from './components/CourseGoals/CourseInput/CourseInput';
 import './App.css';
+
 
 const App = () => {
   const [courseGoals, setCourseGoals] = useState([]);
@@ -29,30 +30,24 @@ const App = () => {
     });
   };
 
-  let content = (
-    <p style={{ textAlign: 'center' }}>Ah! Sweet silence...</p>
-  );
-
-  if (courseGoals.length > 0) {
-    content = (
-      <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} dialogueTurn={dialogueTurn} courseGoals={courseGoals}/>
-    );
+  let title;
+  if (courseGoals.length >= 2) {
+    title = (<div className='title'>
+      <h4>Firesale: A telenovela</h4>
+      </div>)
   }
 
   return (
     <div>
+      {title}
       <section id="goal-form">
         <CourseInput onAddGoal={addGoalHandler}/>
       </section>
+      <section id="stage-directions">
+        <StageDirections  courseGoals={courseGoals}/>
+      </section>
       <section id="goals">
-        {content}
-        {/* {courseGoals.length > 0 && (
-          <CourseGoalList
-            items={courseGoals}
-            onDeleteItem={deleteItemHandler}
-          />
-        ) // <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
-        } */}
+      <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} dialogueTurn={dialogueTurn} courseGoals={courseGoals}/>
       </section>
     </div>
   );

@@ -10,14 +10,14 @@ const FormControl = styled.div`
   font-weight: bold;
   display: block;
   margin-bottom: 0.5rem;
-  color: ${props => (props.invalid ? 'red' : 'black')}
+  color: black;
 }
 
 & input {
   display: block;
   width: 100%;
-  border: 1px solid ${props => (props.invalid ? 'red' : 'black')};
-  background: ${props => (props.invalid ? 'rosybrown' : 'white')};
+  border: 1px solid ${props => (props.invalid ? 'black' : 'black')};
+  background: ${props => (props.invalid ? 'white' : 'white')};
   font: inherit;
   line-height: 1.5rem;
   padding: 0 0.25rem;
@@ -55,10 +55,10 @@ const CourseInput = props => {
   return (
     <form onSubmit={formSubmitHandler}>
       <FormControl invalid={!isValid}>
-        <label>Panlaughlin and Vrocum are alone together at last</label>
-        <input type="text" placeholder={!isValid ? 'One must speak' : ''} onChange={goalInputChangeHandler} />
+        <label>{isValid ? 'Gift the corporations some meaningful words' : 'Some peace and quiet...'}</label>
+        <input type="text" placeholder='Say something... anything...' onChange={goalInputChangeHandler} />
       </FormControl>
-      <Button type="submit">Add Line of Dialogue</Button>
+      <Button type="submit">Speak!</Button>
     </form>
   );
 };

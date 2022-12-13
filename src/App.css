@@ -1,15 +1,56 @@
 #goals {
   width: 35rem;
   max-width: 90%;
-  margin: 3rem auto;
+  margin: 1rem auto;
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 #goal-form {
   width: 30rem;
   max-width: 90%;
-  margin: 3rem auto;
+  margin: 2rem auto;
   padding: 2rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 2);
+  border-radius: 5px;
+  background-color: blanchedalmond;
+  float: left;
+  margin-left: 5%;
+  margin-bottom: 0;
+}
+
+#stage-directions {
+  width: 45rem;
+  max-width: 90%;
+  margin: 3rem auto;
+  /* padding: 1rem; */
   border-radius: 10px;
-  background-color: blanchedalmond
+  align-items: center;
+  float: right;
+  margin-right: 5%;
+}
+
+#stage-directions p{
+  text-align: justify;
+  font-family: Arial;
+}
+
+#stage-directions h3{
+  text-align: justify;
+  font-family: Arial;
+  font-size: 40px;
+}
+
+#stage-directions h1{
+  text-align: center;
+  font-family: Arial;
+  font-size: 45px;
+}
+
+.title{
+  float: right;
+  margin: 0;
+  margin-right: 5%;
+  margin-bottom: 0;
 }
