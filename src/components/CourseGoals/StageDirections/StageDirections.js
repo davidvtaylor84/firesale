@@ -1,16 +1,17 @@
 import React from 'react'
 import './StageDirections.css';
 import FadeIn from '../CourseGoalItem/FadeIn';
+import Image1 from '../Images/beyond.webp'
 
 const StageDirections = (props) => {
 
   let action;
   if(props.courseGoals.length === 0){
     action = (
-        <FadeIn><div className='directions'><h3>Panlaughlin and Vrocum settle down in their sparsely-furnished living room to watch a banned telenovela on the TV. To keep the electricity running, they must talk incessantly.</h3><h3>Our collective dreams are of great worth to the corporations.</h3></div></FadeIn>
+        <FadeIn><div className='directions'><h3>Panlaughlin and Vrocum settle down in their sparsely-furnished living room to watch a banned telenovela. Those caught watching it face up to 50 years in prison.</h3><h3>To keep the electricity running, they must talk incessantly.</h3><h3>Our collective dreams are of great worth to the corporations.</h3></div></FadeIn>
     );} else if (props.courseGoals.length === 1) {
       action = (
-        <FadeIn><h1>FIRESALE: A Telenovela</h1></FadeIn>
+        <FadeIn><h1>FIRESALE: A Telenovela</h1><img src={Image1}/></FadeIn>
       )
     } else if (props.courseGoals.length === 2) {
       action = (
@@ -31,11 +32,11 @@ const StageDirections = (props) => {
       )
     } else if (props.courseGoals.length === 6) {
       action = (
-        <FadeIn><p>Panlaughlin and Vrocum settle down in their sparsely-furnished living room to watch a banned telenovela. To keep the TV and electricity running, they must talk, always. Our collective dreams are of great worth to the corporations.</p></FadeIn>
+        <FadeIn><h1>*Speak more*</h1><h1>*Enunciate your words*</h1><h1>*Be productive*</h1><h1>*Dream big!*</h1></FadeIn>
       )
     } else if (props.courseGoals.length === 7) {
       action = (
-        <FadeIn><p>Panlaughlin and Vrocum settle down in their sparsely-furnished living room to watch a banned telenovela. To keep the TV and electricity running, they must talk, always. Our collective dreams are of great worth to the corporations.</p></FadeIn>
+        <FadeIn><img src={Image1}/></FadeIn>
       )
     } else if (props.courseGoals.length === 8) {
       action = (

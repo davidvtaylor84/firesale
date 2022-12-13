@@ -5,6 +5,7 @@ import './CourseInput.css';
 
 const FormControl = styled.div`
   margin: 0.5rem 0;
+  display: block;
 
  & label {
   font-weight: bold;
@@ -26,7 +27,7 @@ const FormControl = styled.div`
 & input:focus {
   outline: none;
   background: white;
-  border-color: #8b005d;
+  border-color: black
 }`;
 
 

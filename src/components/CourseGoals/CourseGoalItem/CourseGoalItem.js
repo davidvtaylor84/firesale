@@ -4,8 +4,9 @@ import FadeIn from './FadeIn';
 
 const DialogueItemStyling = styled.li`
   margin: 1rem 0;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background: #25D366;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 2);
+  border-radius: 5px;
   color: black;
   padding: 1rem 2rem;
   cursor: pointer;

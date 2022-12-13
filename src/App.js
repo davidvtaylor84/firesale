@@ -3,6 +3,7 @@ import StageDirections from './components/CourseGoals/StageDirections/StageDirec
 import CourseGoalList from './components/CourseGoals/CourseGoalList/CourseGoalList';
 import CourseInput from './components/CourseGoals/CourseInput/CourseInput';
 import './App.css';
+import couch from './components/CourseGoals/Images/onCouch2.png'
 
 
 const App = () => {
@@ -37,6 +38,15 @@ const App = () => {
       </div>)
   }
 
+  let couchImage;
+  if(courseGoals.length === 0){
+    couchImage = (
+      <div className='couch'>
+        <img src={couch}/>
+      </div>
+    );
+  }
+
   return (
     <div>
       {title}
@@ -49,6 +59,7 @@ const App = () => {
       <section id="goals">
       <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} dialogueTurn={dialogueTurn} courseGoals={courseGoals}/>
       </section>
+      {couchImage}
     </div>
   );
 };
