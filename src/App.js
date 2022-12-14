@@ -42,7 +42,7 @@ const App = () => {
   if(courseGoals.length === 0){
     couchImage = (
       <div className='couch'>
-        <img src={couch}/>
+        <img src={couch} alt='Two men hugging'/>
       </div>
     );
   }
