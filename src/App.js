@@ -22,6 +22,9 @@ const App = () => {
     if(dialogueTurn=== true){
       setDialogueTurn(false);
     } else {setDialogueTurn(true)}
+    if(courseGoals.length ===31){
+      setCourseGoals([]);
+    }
   };
 
   const deleteItemHandler = goalId => {
